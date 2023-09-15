@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <!-- Linking to an external CSS file -->
+    <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a class="active" href="#home">Order Management</a>
+        <a href="../Login/HomePage.html">Login</a>
+    </div>
+
+    <!-- Section for "Quotes Pending for Approval" -->
+    <h2>Quotes Pending for Approval</h2>
+    <!-- Button to trigger an import action -->
+    <a href="../order_management_page_importproducts/import_products/index.html">
+        <button onclick="">Import</button>
+    </a>
+    <!-- Link to a page for managing quotes -->
+    <a href="../Customer-quote-page ChaitraliB/customer-quote.html">
+        <button onclick="">Quotes</button>
+    </a>
+    <!-- Unordered list to display quote items (to be added dynamically) -->
+    <ul id="quoteList">
+        <!-- Quote items will be dynamically added here -->
+    </ul>
+
+    <!-- Section for "Approved/Completed Orders" -->
+    <h2>Approved/Completed Orders</h2>
+    <!-- Unordered list to display order items (to be added dynamically) -->
+    <ul id="orderList">
+        <!-- Order items will be dynamically added here -->
+    </ul>
+
+    <!-- JavaScript script for providing functionality to the web page -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+-- COMPANY
+
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS codefury;
+
+-- Switch to the newly created database
+USE codefury;
+
+-- Create the Company table
+CREATE TABLE company(
+    companyId INT AUTO_INCREMENT PRIMARY KEY,
+    companyName VARCHAR(25) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    city VARCHAR(25) NOT NULL,
+    gstNumber VARCHAR(15) NOT NULL
+);
+
+Desc company;
+
+
+-- Insert sample data into the company table
+INSERT INTO company(companyName, address, city, gstNumber)
+VALUES
+    ('HSBC', 'Yerwada Road', 'Pune', 'GST123456'),
+    (‘Deutsche Bank', 'Mira Road', 'Mumbai', 'GST789012'),
+    (MasterCard', 'Park Street', 'Kolkata', 'GST345678');
+
+
+-- EMPLOYEE
+
+USE invoiceManagementDb;
+
+CREATE TABLE employees(
+    employeeId INT AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(25) NOT NULL,
+    password VARCHAR(25) NOT NULL
+);
+
+INSERT INTO Employees (UserName, Password)
+VALUES
+    ('employee1', 'password1'),
+    ('employee2', 'password2'),
+    ('employee3', 'password3');
+	
+	
+	
+show databases;
+
+create database codefury;
+
+use codefury;
+
+show tables;
+
+create table orders(
+	orderId varchar(20) primary key,
+    orderDate date,
+    customerId varchar(20),
+    customerShoppingAddress varchar(30),
+    listOfProducts varchar(40),
+    totalOrderValue double,
+    shippingCost double,
+    shippingAgency varchar(20),
+    orderStatus varchar(20)
+);
+
+desc orders;
+
+show tables;
+
+create table invoice(
+	invoiceID varchar(20) primary key,
+    invoicedate date,
+    orderDetails varchar(40),
+    customerDetails varchar(30),
+    productList varchar(50),
+    typeOfGST varchar(10),
+    totalGSTAmount double,
+    totalInvoiceValue double,
+    statusOfInvoice varchar(10)
+);
+
+
+show tables;
+
+desc invoice;
+
+
+use codefury;
+
+show tables;
+
+create table customer(id integer primary key,
+						 name varchar(20),
+						 gstNo varchar(15),
+						 address varchar(25),
+						 city varchar(10) ,
+						 email varchar(20) , 
+						 pincode varchar(6)
+ );
+ 
+ desc customer;
+ 
+insert into customer values(1,
+						"Soumit Pandey",
+						"452136527854896",
+						"16A Camac Street",
+						"Kolkata",
+						"soumitpandey@gmail.com",
+						"700108"
+);
+
+insert into customer values(2,
+							"Adrija Ray",
+							"452136527854",
+							"16A Park Street",
+							"Kolkata",
+							"adrijaniray@gm.com",
+							"700108"
+);
+
+insert into customer values(3,
+							"Prakriti Sengupta",
+							"4521365278546",
+							"16A Shyambazar",
+							"Kolkata",
+							"prakritipogo@gm.com",
+							"700111"
+);
+
+
+create table product(id integer primary key,
+					name varchar(20),
+                    price double,
+                    category varchar(20)
+);
+
+desc product;
+s
+insert into product values(1,
+						"Lizol",
+						45.00,
+						"Level 1"
+);
+
+insert into product values(2,
+						"Maggi",
+						100.00,
+						"Level 2"
+);
+
+insert into product values(3,
+						"Urad Dal",
+						150.00,
+						"Level 3"
+);

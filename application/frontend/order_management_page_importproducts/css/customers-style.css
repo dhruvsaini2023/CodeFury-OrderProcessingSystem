@@ -1,0 +1,33 @@
+/* css/customers-style.css */
+/* Customers page styles */
+#customer-info {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#quotes-section, #orders-section {
+    margin-bottom: 20px;
+}
+
+#quotes-section h2, #orders-section h2 {
+    margin-bottom: 10px;
+}
+
+ul#quotes li, ul#orders li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+button.approve-button, button.show-invoice-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
